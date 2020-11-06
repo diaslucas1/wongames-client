@@ -26,13 +26,13 @@ describe('<BannerSlider />', () => {
   it('should render vertical slide', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />)
 
-    expect(container.querySelector('.slick-vertical'))
+    expect(container.querySelector('.slick-vertical')).toBeInTheDocument()
   })
 
-  it('should render the dots', () => {
+  it('should render with the dots', () => {
     const { container } = renderWithTheme(<BannerSlider items={items} />)
 
-    expect(container.querySelector('.slick-dots'))
+    expect(container.querySelector('.slick-dots')).toBeInTheDocument()
   })
 
   it('should render with 1 active item', () => {
